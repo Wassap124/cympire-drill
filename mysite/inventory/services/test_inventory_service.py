@@ -13,22 +13,22 @@ class TestInventory(TestCase):
         # if inventory was set up correctly, this should always be an int
         assert type(inventroyManagement.get_median_for_category(10)) is int
 
-    def test_get_categories_for_stroe(self):
+    def test_get_categories_for_store(self):
         inventroyManagement = Inventory(inventoryPath)
         inventroyManagement._inventory = [
             { 'store': 1, 'category': 1}, 
             { 'store': 1, 'category': 2}, 
             { 'store': 2, 'category': 3}
         ]
-        assert inventroyManagement.get_categories_for_stroe(1) == [1, 2]
-    def test_get_categories_for_stroe_works_with_non_existing_store(self):
+        assert inventroyManagement.get_categories_for_store(1) == [1, 2]
+    def test_get_categories_for_store_works_with_non_existing_store(self):
         inventroyManagement = Inventory(inventoryPath)
         inventroyManagement._inventory = [
             { 'store': 1, 'category': 1}, 
             { 'store': 1, 'category': 2}, 
             { 'store': 2, 'category': 3}
         ]
-        assert inventroyManagement.get_categories_for_stroe(5) == []
+        assert inventroyManagement.get_categories_for_store(5) == []
     def test_get_item_inventory(self):
         inventroyManagement = Inventory(inventoryPath)
         inventroyManagement._inventory = [

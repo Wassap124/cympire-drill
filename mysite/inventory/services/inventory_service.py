@@ -19,7 +19,7 @@ class Inventory(object):
     """
         Given a store id you should return all the categories ids in the inventory
     """
-    def get_categories_for_stroe(self, store):
+    def get_categories_for_store(self, store):
         storeItems = filter(lambda item: item['store'] == store, self._inventory)
         storeCategories = map( lambda item: item['category'], storeItems)
         uniqueCategories = []

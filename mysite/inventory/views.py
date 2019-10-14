@@ -15,7 +15,7 @@ def index(request):
     return HttpResponse("Hello, world. You're at the inventory index.")
 
 def store_categories(request, store_id):
-    response = inventory.get_categories_for_stroe(store_id)
+    response = inventory.get_categories_for_store(store_id)
     return HttpResponse(displayJson(response))
 
 def item_by_name(request, item_name):
